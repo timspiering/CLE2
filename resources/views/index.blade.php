@@ -10,9 +10,10 @@
     <script src="thirdparty/jquery/jquery-3.3.1.min.js"></script>
     <script src="thirdparty/air-datepicker/js/datepicker.min.js"></script>
     <script src="thirdparty/air-datepicker/js/i18n/datepicker.en.js"></script>
+    <script src="thirdparty/air-datepicker/js/i18n/datepicker.nl.js"></script>
 </head>
 <body>
     <h1>Reservering</h1>
-    <input type='text' class="datepicker-here" data-position="right top" />
+    <input type='text' class="datepicker-here" data-position="right top" data-language='en' />
 </body>
 </html>
