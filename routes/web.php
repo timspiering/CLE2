@@ -11,6 +11,7 @@
 |
 */
 
-Route::get('/', function () {
-    return view('index');
-});
+
+Route::get('/', 'Form\BookingController@index');
+
+Route::post('/', 'Form\BookingController@store');
