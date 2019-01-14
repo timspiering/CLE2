@@ -13,5 +13,24 @@
 
 
 Route::get('/', 'Form\BookingController@index');
-
 Route::post('/', 'Form\BookingController@store');
+
+Auth::routes(['register' => false]);
+
+Route::get('/admin', 'Auth\AdminController@index')->name('home');
+
+// List
+Route::get('/admin/list', 'Admin\CRUDController@index');
+
+// Detail
+Route::get('/admin/detail/{id}', 'Admin\CRUDController@getDetail');
+
+// Add
+Route::any('/admin/add', 'Admin\CRUDController@store');
+
+// Edit
+Route::get('/admin/edit/{id}', 'Admin\CRUDController@getEdit');
+Route::post('/admin/edit/{id}', 'Admin\CRUDController@postEdit')->name('admin.edit');
+
+// Delete
+Route::any('/admin/remove/{id}', 'Admin\CRUDController@remove');
