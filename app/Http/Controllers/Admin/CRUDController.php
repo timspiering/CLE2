@@ -53,6 +53,7 @@ class CRUDController extends Controller
      * Edit post new data
      * @param $id
      * @param Request $request
+     * @return \Illuminate\Http\RedirectResponse
      */
     public function postEdit($id, Request $request)
     {
@@ -66,6 +67,7 @@ class CRUDController extends Controller
         $booking->time_end = "12:11:12";
 
         $booking->save();
+        return back()->withInput();
     }
 
     /**
