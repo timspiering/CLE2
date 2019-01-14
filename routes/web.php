@@ -37,4 +37,4 @@ Route::get('/admin/edit/{id}', 'Admin\CRUDController@getEdit');
 Route::post('/admin/edit/{id}', 'Admin\CRUDController@postEdit')->name('admin.edit');
 
 // Delete
-Route::any('/admin/remove/{id}', 'Admin\CRUDController@remove');
+Route::any('/admin/delete/{id}', 'Admin\CRUDController@delete');

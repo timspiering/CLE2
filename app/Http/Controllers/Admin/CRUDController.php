@@ -82,11 +82,15 @@ class CRUDController extends Controller
 
     /**
      * Delete booking
-     * @param Request $request
+     * @param $id
      * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
      */
-    public function delete(Request $request)
+    public function delete($id)
     {
-        return view('admin/delete');
+        $booking = Booking::find($id);
+        // TODO: Add confirmation
+        $booking->delete();
+
+        return back();
     }
 }

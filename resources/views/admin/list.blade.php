@@ -18,7 +18,7 @@
                 <td>{{ $booking->phone }}</td>
                 <td>{{ $booking->date }}</td>
                 <td><a href="edit/{{ $booking->id }}">bewerken</a></td>
-                <td>verwijderen</td>
+                <td><a href="delete/{{ $booking->id }}">verwijderen</a></td>
             </tr>
         @endforeach
     </table>
