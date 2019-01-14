@@ -17,7 +17,11 @@ Route::post('/', 'Form\BookingController@store');
 
 Auth::routes(['register' => false]);
 
-Route::get('/admin', 'Auth\AdminController@index')->name('home');
+//Route::get('/admin', 'Auth\AdminController@index')->name('home');
+
+Route::get('/admin', function() {
+    return redirect('admin/list');
+});
 
 // List
 Route::get('/admin/list', 'Admin\CRUDController@index');
